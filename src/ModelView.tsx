@@ -1,11 +1,13 @@
 // パッケージのインポート
-import { useRef, Suspense, useEffect } from "react";
+import { useRef, Suspense, useEffect, useState } from "react";
 import { useLoader } from "@react-three/fiber";
 import { Mesh } from "three";
 import { OrbitControls as OrbitControlImpl } from "three-stdlib";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { OrbitControls, Preload, PerspectiveCamera, Center, Html, useProgress } from "@react-three/drei";
+import { resolve } from "path";
+import { rejects } from "assert";
 
 // ModelViewのpropsの型定義
 type ModelViewProps = {
