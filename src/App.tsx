@@ -13,7 +13,8 @@ function App() {
   const [selectedModel, setSelectedModel] = useState<number>(0);
   const [model, setModel] = useState<string[]>([
   ]);
-  const API_URL = 'http://192.168.0.25:8081/';
+  //const API_URL = 'http://192.168.0.25:8081/';
+  const API_URL = 'http://kapibara0510.tplinkdns.com:8081/';
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   //const model_url = ['https://some-anyone-data.s3.ap-northeast-3.amazonaws.com/public_obj/hotel_in_sunshine/Scaniverse_2023_08_28_184503.obj'];
