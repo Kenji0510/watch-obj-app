@@ -61,7 +61,7 @@ function App() {
           })}
         </div>
         {/* ここから削除 */}
-        { (
+        {model.length > 0 && (
           <Canvas className="canvas">
             <ModelView model_url={model[selectedModel]} key={selectedModel} />
           </Canvas>
