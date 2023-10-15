@@ -14,10 +14,10 @@ function App() {
   const [model, setModel] = useState<string[]>([
   ]);
   //const API_URL = 'http://192.168.0.25:8081/';
-  const API_URL = 'http://kapibara0510.tplinkdns.com:8081/';
+  const API_URL = 'https://kapibara0510.tplinkdns.com:8081/';
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const modelUrl = 'https://some-anyone-data.s3.ap-northeast-3.amazonaws.com/public_obj/hotel_in_sunshine/Scaniverse_2023_08_28_184503.obj';
+  //const modelUrl = 'https://some-anyone-data.s3.ap-northeast-3.amazonaws.com/public_obj/hotel_in_sunshine/Scaniverse_2023_08_28_184503.obj';
 
 
   useEffect(() => {
@@ -63,7 +63,7 @@ function App() {
         {/* ここから削除 */}
         {  (
           <Canvas className="canvas">
-            <ModelView model_url={modelUrl} key={0} />
+            <ModelView model_url={model[selectedModel]} key={selectedModel} />
           </Canvas>
         )}
         <Footer />
